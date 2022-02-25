@@ -17,6 +17,5 @@ public class GivenAnswerDto {
     private AnswerOptionDto answerOption;
     private MantraUserDto user;
     private String text;
-    private String additionalText;
 
 }

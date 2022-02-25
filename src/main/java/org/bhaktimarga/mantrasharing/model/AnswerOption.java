@@ -26,11 +26,5 @@ public class AnswerOption {
     @Basic
     @Column(name = "code", nullable = true, length = 64)
     private String code;
-    @Basic
-    @Column(name = "text", nullable = true, length = 512)
-    private String text;
-    @Basic
-    @Column(name = "additional_text", nullable = true, length = 512)
-    private String additionalText;
 
 }

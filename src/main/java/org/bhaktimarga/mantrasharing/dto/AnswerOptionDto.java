@@ -14,7 +14,5 @@ public class AnswerOptionDto {
     private UUID id;
     private QuestionDto question;
     private String code;
-    private String text;
-    private String additionalText;
 
 }

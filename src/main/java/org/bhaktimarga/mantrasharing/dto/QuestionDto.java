@@ -15,7 +15,6 @@ public class QuestionDto {
 
     private UUID id;
     private String code;
-    private String text;
     private Boolean isMultyanswer;
     private List<AnswerOptionDto> answers;
 }

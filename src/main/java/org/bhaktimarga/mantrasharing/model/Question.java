@@ -22,9 +22,6 @@ public class Question {
     @Column(name = "code", nullable = true, length = 64)
     private String code;
     @Basic
-    @Column(name = "text", nullable = true, length = 512)
-    private String text;
-    @Basic
     @Column(name = "is_multyanswer", nullable = true)
     private Boolean isMultyanswer;
 

@@ -30,8 +30,5 @@ public class GivenAnswer {
     @Basic
     @Column(name = "text", nullable = true, length = 512)
     private String text;
-    @Basic
-    @Column(name = "additional_text", nullable = true, length = 512)
-    private String additionalText;
 
 }
