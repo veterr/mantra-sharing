@@ -24,7 +24,7 @@ spring:
             hibernate:
                 format_sql: true
                 order_by.default_null_ordering: last
-                default_schema: mctm
+                default_schema: mantrasharing
                 jdbc:
                     lob:
                         non_contextual_creation: true
