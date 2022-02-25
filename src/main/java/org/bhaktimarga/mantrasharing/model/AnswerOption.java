@@ -18,9 +18,11 @@ public class AnswerOption {
     @Id
     @Column(name = "id", nullable = false)
     private UUID id;
-    @Basic
-    @Column(name = "question_id", nullable = false)
-    private UUID questionId;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "question_id")
+    private Question question;
+
     @Basic
     @Column(name = "code", nullable = true, length = 64)
     private String code;

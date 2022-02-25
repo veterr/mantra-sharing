@@ -1,7 +1,9 @@
 package org.bhaktimarga.mantrasharing.dto;
 
 import lombok.*;
+import org.bhaktimarga.mantrasharing.model.AnswerOption;
 
+import java.util.List;
 import java.util.UUID;
 
 @Builder
@@ -15,5 +17,5 @@ public class QuestionDto {
     private String code;
     private String text;
     private Boolean isMultyanswer;
-
+    private List<AnswerOptionDto> answers;
 }

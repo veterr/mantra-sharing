@@ -1,7 +1,12 @@
 package org.bhaktimarga.mantrasharing.dto;
 
 import lombok.*;
+import org.bhaktimarga.mantrasharing.model.MantraUser;
+import org.bhaktimarga.mantrasharing.model.Question;
 
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import java.util.UUID;
 
 @Builder
@@ -12,8 +17,8 @@ import java.util.UUID;
 public class AskedQuestionDto {
 
     private UUID id;
-    private UUID questionId;
-    private UUID userId;
+    private QuestionDto question;
+    private MantraUserDto user;
     private String text;
 
 }

@@ -3,6 +3,7 @@ package org.bhaktimarga.mantrasharing.model;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -13,7 +14,7 @@ import java.util.UUID;
 @AllArgsConstructor
 @Table(name = "question")
 public class Question {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
     @Column(name = "id", nullable = false)
     private UUID id;
@@ -27,4 +28,6 @@ public class Question {
     @Column(name = "is_multyanswer", nullable = true)
     private Boolean isMultyanswer;
 
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "question")
+    List<AnswerOption> answers;
 }

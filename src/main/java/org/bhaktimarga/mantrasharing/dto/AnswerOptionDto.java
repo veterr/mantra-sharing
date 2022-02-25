@@ -12,7 +12,7 @@ import java.util.UUID;
 public class AnswerOptionDto {
 
     private UUID id;
-    private UUID questionId;
+    private QuestionDto question;
     private String code;
     private String text;
     private String additionalText;

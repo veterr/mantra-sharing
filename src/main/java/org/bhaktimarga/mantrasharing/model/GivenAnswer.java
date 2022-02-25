@@ -18,12 +18,15 @@ public class GivenAnswer {
     @Id
     @Column(name = "id", nullable = false)
     private UUID id;
-    @Basic
-    @Column(name = "answer_option_id", nullable = false)
-    private UUID answerOptionId;
-    @Basic
-    @Column(name = "user_id", nullable = false)
-    private UUID userId;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "answer_option_id")
+    private AnswerOption answerOption;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private MantraUser user;
+
     @Basic
     @Column(name = "text", nullable = true, length = 512)
     private String text;
